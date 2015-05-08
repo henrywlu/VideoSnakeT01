@@ -1,7 +1,6 @@
-
 /*
-     File: main.m
- Abstract: Standard main file.
+     File: VideoSnakeAppDelegate.h
+ Abstract: Application delegate
   Version: 1.0
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
@@ -93,13 +92,12 @@
 
 #import <UIKit/UIKit.h>
 
-#import "VideoSnakeAppDelegate.h"
+@class VideoSnakeViewController;
 
-int main(int argc, char *argv[])
-{
-	int retVal = 0;
-	@autoreleasepool {
-	    retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([VideoSnakeAppDelegate class]));
-	}
-	return retVal;
-}
+@interface VideoSnakeAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (nonatomic, retain) UIWindow *window;
+
+@property (nonatomic, retain) VideoSnakeViewController *viewController;
+
+@end

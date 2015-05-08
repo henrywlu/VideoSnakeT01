@@ -1,7 +1,6 @@
-
 /*
-     File: main.m
- Abstract: Standard main file.
+     File: MovieRecorder.h
+ Abstract: Real-time movie recorder which is totally non-blocking
   Version: 1.0
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
@@ -91,15 +90,33 @@
  
  */
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-#import "VideoSnakeAppDelegate.h"
+#import <CoreMedia/CMFormatDescription.h>
+#import <CoreMedia/CMSampleBuffer.h>
 
-int main(int argc, char *argv[])
-{
-	int retVal = 0;
-	@autoreleasepool {
-	    retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([VideoSnakeAppDelegate class]));
-	}
-	return retVal;
-}
+@protocol MovieRecorderDelegate;
+
+@interface MovieRecorder : NSObject
+
+// Only one audio and video track each are allowed.
+- (void)addVideoTrackWithSourceFormatDescription:(CMFormatDescriptionRef)formatDescription transform:(CGAffineTransform)transform;
+- (void)addAudioTrackWithSourceFormatDescription:(CMFormatDescriptionRef)formatDescription;
+
+- (void)setDelegate:(id<MovieRecorderDelegate>)delegate callbackQueue:(dispatch_queue_t)delegateCallbackQueue; // delegate is weak referenced
+
+- (void)prepareToRecordToURL:(NSURL*)URL; // Asynchronous, might take several hunderd milliseconds. When finished the delegate's recorderDidFinishPreparing: or recorder:didFailWithError: method will be called.
+
+- (void)appendVideoSampleBuffer:(CMSampleBufferRef)sampleBuffer;
+- (void)appendAudioSampleBuffer:(CMSampleBufferRef)sampleBuffer;
+
+- (void)finishRecording; // Asynchronous, might take several hundred milliseconds. When finished the delegate's recorderDidFinishRecording: or recorder:didFailWithError: method will be called.
+
+@end
+
+@protocol MovieRecorderDelegate <NSObject>
+@required
+- (void)recorderDidFinishPreparingToRecord:(MovieRecorder*)recorder;
+- (void)recorder:(MovieRecorder*)recorder didFailWithError:(NSError*)error;
+- (void)recorderDidFinishRecording:(MovieRecorder*)recorder;
+@end

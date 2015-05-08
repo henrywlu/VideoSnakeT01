@@ -1,7 +1,7 @@
 
 /*
-     File: main.m
- Abstract: Standard main file.
+     File: VideoSnakeAppDelegate.m
+ Abstract: Application delegate
   Version: 1.0
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
@@ -91,15 +91,35 @@
  
  */
 
-#import <UIKit/UIKit.h>
-
 #import "VideoSnakeAppDelegate.h"
 
-int main(int argc, char *argv[])
+#import "VideoSnakeViewController.h"
+
+@implementation VideoSnakeAppDelegate
+
+@synthesize window = _window;
+@synthesize viewController = _viewController;
+
+- (void)dealloc
 {
-	int retVal = 0;
-	@autoreleasepool {
-	    retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([VideoSnakeAppDelegate class]));
-	}
-	return retVal;
+    [_window release];
+    [_viewController release];
+    
+    [super dealloc];
 }
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    // Override point for customization after application launch.
+	self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+	    self.viewController = [[[VideoSnakeViewController alloc] initWithNibName:@"VideoSnakeViewController_iPhone" bundle:nil] autorelease]; 
+	} else {
+	    self.viewController = [[[VideoSnakeViewController alloc] initWithNibName:@"VideoSnakeViewController_iPad" bundle:nil] autorelease]; 
+	}
+	self.window.rootViewController = self.viewController;
+    [self.window makeKeyAndVisible];
+    return YES;
+}
+
+@end

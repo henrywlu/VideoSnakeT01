@@ -7,13 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F41FAA6C1AFD5440000799CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F41FAA6B1AFD5440000799CC /* main.m */; };
-		F41FAA6F1AFD5440000799CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F41FAA6E1AFD5440000799CC /* AppDelegate.m */; };
-		F41FAA721AFD5440000799CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41FAA711AFD5440000799CC /* ViewController.m */; };
-		F41FAA751AFD5440000799CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F41FAA731AFD5440000799CC /* Main.storyboard */; };
-		F41FAA771AFD5440000799CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F41FAA761AFD5440000799CC /* Images.xcassets */; };
-		F41FAA7A1AFD5440000799CC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F41FAA781AFD5440000799CC /* LaunchScreen.xib */; };
 		F41FAA861AFD5440000799CC /* VideoSnakeT01Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F41FAA851AFD5440000799CC /* VideoSnakeT01Tests.m */; };
+		F41FAA941AFD5890000799CC /* PadIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F41FAA8F1AFD5890000799CC /* PadIcon@2x.png */; };
+		F41FAA951AFD5890000799CC /* PadIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F41FAA901AFD5890000799CC /* PadIcon.png */; };
+		F41FAA961AFD5890000799CC /* PhoneIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F41FAA911AFD5890000799CC /* PhoneIcon@2x.png */; };
+		F41FAA971AFD5890000799CC /* PhoneIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F41FAA921AFD5890000799CC /* PhoneIcon.png */; };
+		F41FAA981AFD5890000799CC /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = F41FAA931AFD5890000799CC /* ReadMe.txt */; };
+		F41FAAA11AFD58BD000799CC /* VideoSnakeOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = F41FAA9A1AFD58BD000799CC /* VideoSnakeOpenGLView.m */; };
+		F41FAAA21AFD58BD000799CC /* VideoSnakeSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F41FAA9C1AFD58BD000799CC /* VideoSnakeSessionManager.m */; };
+		F41FAAA31AFD58BD000799CC /* VideoSnakeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F41FAA9E1AFD58BD000799CC /* VideoSnakeAppDelegate.m */; };
+		F41FAAA41AFD58BD000799CC /* VideoSnakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41FAAA01AFD58BD000799CC /* VideoSnakeViewController.m */; };
+		F41FAAA91AFD58CA000799CC /* MotionSynchronizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F41FAAA61AFD58CA000799CC /* MotionSynchronizer.m */; };
+		F41FAAAA1AFD58CA000799CC /* MovieRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = F41FAAA81AFD58CA000799CC /* MovieRecorder.m */; };
+		F41FAAB11AFD58FE000799CC /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = F41FAAAC1AFD58FE000799CC /* matrix.c */; };
+		F41FAAB21AFD58FE000799CC /* ShaderUtilities.c in Sources */ = {isa = PBXBuildFile; fileRef = F41FAAAE1AFD58FE000799CC /* ShaderUtilities.c */; };
+		F41FAAB31AFD58FE000799CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F41FAAAF1AFD58FE000799CC /* main.m */; };
+		F41FAAB81AFD590A000799CC /* VideoSnakeViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F41FAAB41AFD590A000799CC /* VideoSnakeViewController_iPhone.xib */; };
+		F41FAAB91AFD590A000799CC /* VideoSnakeViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F41FAAB51AFD590A000799CC /* VideoSnakeViewController_iPad.xib */; };
+		F41FAABA1AFD590A000799CC /* VideoSnake-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F41FAAB61AFD590A000799CC /* VideoSnake-Info.plist */; };
+		F41FAABB1AFD590A000799CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F41FAAB71AFD590A000799CC /* InfoPlist.strings */; };
+		F41FAAC81AFD59BD000799CC /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41FAABD1AFD59BD000799CC /* AssetsLibrary.framework */; };
+		F41FAAC91AFD59BD000799CC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41FAABE1AFD59BD000799CC /* AVFoundation.framework */; };
+		F41FAACA1AFD59BD000799CC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41FAABF1AFD59BD000799CC /* CoreGraphics.framework */; };
+		F41FAACB1AFD59BD000799CC /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41FAAC01AFD59BD000799CC /* CoreMedia.framework */; };
+		F41FAACC1AFD59BD000799CC /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41FAAC11AFD59BD000799CC /* CoreMotion.framework */; };
+		F41FAACD1AFD59BD000799CC /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41FAAC21AFD59BD000799CC /* CoreVideo.framework */; };
+		F41FAACE1AFD59BD000799CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41FAAC31AFD59BD000799CC /* Foundation.framework */; };
+		F41FAACF1AFD59BD000799CC /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41FAAC41AFD59BD000799CC /* ImageIO.framework */; };
+		F41FAAD01AFD59BD000799CC /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41FAAC51AFD59BD000799CC /* OpenGLES.framework */; };
+		F41FAAD11AFD59BD000799CC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41FAAC61AFD59BD000799CC /* QuartzCore.framework */; };
+		F41FAAD21AFD59BD000799CC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41FAAC71AFD59BD000799CC /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,18 +51,47 @@
 
 /* Begin PBXFileReference section */
 		F41FAA661AFD5440000799CC /* VideoSnakeT01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoSnakeT01.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F41FAA6A1AFD5440000799CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F41FAA6B1AFD5440000799CC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F41FAA6D1AFD5440000799CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F41FAA6E1AFD5440000799CC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F41FAA701AFD5440000799CC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F41FAA711AFD5440000799CC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F41FAA741AFD5440000799CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F41FAA761AFD5440000799CC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F41FAA791AFD5440000799CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F41FAA7F1AFD5440000799CC /* VideoSnakeT01Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoSnakeT01Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F41FAA841AFD5440000799CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F41FAA851AFD5440000799CC /* VideoSnakeT01Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoSnakeT01Tests.m; sourceTree = "<group>"; };
+		F41FAA8F1AFD5890000799CC /* PadIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PadIcon@2x.png"; sourceTree = "<group>"; };
+		F41FAA901AFD5890000799CC /* PadIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PadIcon.png; sourceTree = "<group>"; };
+		F41FAA911AFD5890000799CC /* PhoneIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PhoneIcon@2x.png"; sourceTree = "<group>"; };
+		F41FAA921AFD5890000799CC /* PhoneIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PhoneIcon.png; sourceTree = "<group>"; };
+		F41FAA931AFD5890000799CC /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		F41FAA991AFD58BD000799CC /* VideoSnakeOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoSnakeOpenGLView.h; sourceTree = "<group>"; };
+		F41FAA9A1AFD58BD000799CC /* VideoSnakeOpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoSnakeOpenGLView.m; sourceTree = "<group>"; };
+		F41FAA9B1AFD58BD000799CC /* VideoSnakeSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoSnakeSessionManager.h; sourceTree = "<group>"; };
+		F41FAA9C1AFD58BD000799CC /* VideoSnakeSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoSnakeSessionManager.m; sourceTree = "<group>"; };
+		F41FAA9D1AFD58BD000799CC /* VideoSnakeAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoSnakeAppDelegate.h; sourceTree = "<group>"; };
+		F41FAA9E1AFD58BD000799CC /* VideoSnakeAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoSnakeAppDelegate.m; sourceTree = "<group>"; };
+		F41FAA9F1AFD58BD000799CC /* VideoSnakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoSnakeViewController.h; sourceTree = "<group>"; };
+		F41FAAA01AFD58BD000799CC /* VideoSnakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoSnakeViewController.m; sourceTree = "<group>"; };
+		F41FAAA51AFD58CA000799CC /* MotionSynchronizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionSynchronizer.h; sourceTree = "<group>"; };
+		F41FAAA61AFD58CA000799CC /* MotionSynchronizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionSynchronizer.m; sourceTree = "<group>"; };
+		F41FAAA71AFD58CA000799CC /* MovieRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieRecorder.h; sourceTree = "<group>"; };
+		F41FAAA81AFD58CA000799CC /* MovieRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieRecorder.m; sourceTree = "<group>"; };
+		F41FAAAB1AFD58FE000799CC /* matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matrix.h; sourceTree = "<group>"; };
+		F41FAAAC1AFD58FE000799CC /* matrix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = matrix.c; sourceTree = "<group>"; };
+		F41FAAAD1AFD58FE000799CC /* ShaderUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderUtilities.h; sourceTree = "<group>"; };
+		F41FAAAE1AFD58FE000799CC /* ShaderUtilities.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ShaderUtilities.c; sourceTree = "<group>"; };
+		F41FAAAF1AFD58FE000799CC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F41FAAB01AFD58FE000799CC /* VideoSnake-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VideoSnake-Prefix.pch"; sourceTree = "<group>"; };
+		F41FAAB41AFD590A000799CC /* VideoSnakeViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoSnakeViewController_iPhone.xib; sourceTree = "<group>"; };
+		F41FAAB51AFD590A000799CC /* VideoSnakeViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoSnakeViewController_iPad.xib; sourceTree = "<group>"; };
+		F41FAAB61AFD590A000799CC /* VideoSnake-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "VideoSnake-Info.plist"; sourceTree = "<group>"; };
+		F41FAAB71AFD590A000799CC /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		F41FAABD1AFD59BD000799CC /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		F41FAABE1AFD59BD000799CC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F41FAABF1AFD59BD000799CC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F41FAAC01AFD59BD000799CC /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		F41FAAC11AFD59BD000799CC /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		F41FAAC21AFD59BD000799CC /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		F41FAAC31AFD59BD000799CC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F41FAAC41AFD59BD000799CC /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		F41FAAC51AFD59BD000799CC /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		F41FAAC61AFD59BD000799CC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F41FAAC71AFD59BD000799CC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +99,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F41FAAD11AFD59BD000799CC /* QuartzCore.framework in Frameworks */,
+				F41FAAD21AFD59BD000799CC /* UIKit.framework in Frameworks */,
+				F41FAACF1AFD59BD000799CC /* ImageIO.framework in Frameworks */,
+				F41FAACB1AFD59BD000799CC /* CoreMedia.framework in Frameworks */,
+				F41FAACA1AFD59BD000799CC /* CoreGraphics.framework in Frameworks */,
+				F41FAAC91AFD59BD000799CC /* AVFoundation.framework in Frameworks */,
+				F41FAACC1AFD59BD000799CC /* CoreMotion.framework in Frameworks */,
+				F41FAAC81AFD59BD000799CC /* AssetsLibrary.framework in Frameworks */,
+				F41FAACE1AFD59BD000799CC /* Foundation.framework in Frameworks */,
+				F41FAACD1AFD59BD000799CC /* CoreVideo.framework in Frameworks */,
+				F41FAAD01AFD59BD000799CC /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +126,7 @@
 		F41FAA5D1AFD5440000799CC = {
 			isa = PBXGroup;
 			children = (
+				F41FAABC1AFD59A0000799CC /* Frameworks */,
 				F41FAA681AFD5440000799CC /* VideoSnakeT01 */,
 				F41FAA821AFD5440000799CC /* VideoSnakeT01Tests */,
 				F41FAA671AFD5440000799CC /* Products */,
@@ -81,13 +145,33 @@
 		F41FAA681AFD5440000799CC /* VideoSnakeT01 */ = {
 			isa = PBXGroup;
 			children = (
-				F41FAA6D1AFD5440000799CC /* AppDelegate.h */,
-				F41FAA6E1AFD5440000799CC /* AppDelegate.m */,
-				F41FAA701AFD5440000799CC /* ViewController.h */,
-				F41FAA711AFD5440000799CC /* ViewController.m */,
-				F41FAA731AFD5440000799CC /* Main.storyboard */,
-				F41FAA761AFD5440000799CC /* Images.xcassets */,
-				F41FAA781AFD5440000799CC /* LaunchScreen.xib */,
+				F41FAA8F1AFD5890000799CC /* PadIcon@2x.png */,
+				F41FAA901AFD5890000799CC /* PadIcon.png */,
+				F41FAA911AFD5890000799CC /* PhoneIcon@2x.png */,
+				F41FAA921AFD5890000799CC /* PhoneIcon.png */,
+				F41FAA931AFD5890000799CC /* ReadMe.txt */,
+				F41FAA991AFD58BD000799CC /* VideoSnakeOpenGLView.h */,
+				F41FAA9A1AFD58BD000799CC /* VideoSnakeOpenGLView.m */,
+				F41FAA9B1AFD58BD000799CC /* VideoSnakeSessionManager.h */,
+				F41FAA9C1AFD58BD000799CC /* VideoSnakeSessionManager.m */,
+				F41FAA9D1AFD58BD000799CC /* VideoSnakeAppDelegate.h */,
+				F41FAA9E1AFD58BD000799CC /* VideoSnakeAppDelegate.m */,
+				F41FAA9F1AFD58BD000799CC /* VideoSnakeViewController.h */,
+				F41FAAA01AFD58BD000799CC /* VideoSnakeViewController.m */,
+				F41FAAA51AFD58CA000799CC /* MotionSynchronizer.h */,
+				F41FAAA61AFD58CA000799CC /* MotionSynchronizer.m */,
+				F41FAAA71AFD58CA000799CC /* MovieRecorder.h */,
+				F41FAAA81AFD58CA000799CC /* MovieRecorder.m */,
+				F41FAAAB1AFD58FE000799CC /* matrix.h */,
+				F41FAAAC1AFD58FE000799CC /* matrix.c */,
+				F41FAAAD1AFD58FE000799CC /* ShaderUtilities.h */,
+				F41FAAAE1AFD58FE000799CC /* ShaderUtilities.c */,
+				F41FAAAF1AFD58FE000799CC /* main.m */,
+				F41FAAB01AFD58FE000799CC /* VideoSnake-Prefix.pch */,
+				F41FAAB41AFD590A000799CC /* VideoSnakeViewController_iPhone.xib */,
+				F41FAAB51AFD590A000799CC /* VideoSnakeViewController_iPad.xib */,
+				F41FAAB61AFD590A000799CC /* VideoSnake-Info.plist */,
+				F41FAAB71AFD590A000799CC /* InfoPlist.strings */,
 				F41FAA691AFD5440000799CC /* Supporting Files */,
 			);
 			path = VideoSnakeT01;
@@ -96,8 +180,6 @@
 		F41FAA691AFD5440000799CC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F41FAA6A1AFD5440000799CC /* Info.plist */,
-				F41FAA6B1AFD5440000799CC /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -117,6 +199,24 @@
 				F41FAA841AFD5440000799CC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F41FAABC1AFD59A0000799CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F41FAABD1AFD59BD000799CC /* AssetsLibrary.framework */,
+				F41FAABE1AFD59BD000799CC /* AVFoundation.framework */,
+				F41FAABF1AFD59BD000799CC /* CoreGraphics.framework */,
+				F41FAAC01AFD59BD000799CC /* CoreMedia.framework */,
+				F41FAAC11AFD59BD000799CC /* CoreMotion.framework */,
+				F41FAAC21AFD59BD000799CC /* CoreVideo.framework */,
+				F41FAAC31AFD59BD000799CC /* Foundation.framework */,
+				F41FAAC41AFD59BD000799CC /* ImageIO.framework */,
+				F41FAAC51AFD59BD000799CC /* OpenGLES.framework */,
+				F41FAAC61AFD59BD000799CC /* QuartzCore.framework */,
+				F41FAAC71AFD59BD000799CC /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +299,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F41FAA751AFD5440000799CC /* Main.storyboard in Resources */,
-				F41FAA7A1AFD5440000799CC /* LaunchScreen.xib in Resources */,
-				F41FAA771AFD5440000799CC /* Images.xcassets in Resources */,
+				F41FAAB81AFD590A000799CC /* VideoSnakeViewController_iPhone.xib in Resources */,
+				F41FAABA1AFD590A000799CC /* VideoSnake-Info.plist in Resources */,
+				F41FAAB91AFD590A000799CC /* VideoSnakeViewController_iPad.xib in Resources */,
+				F41FAA971AFD5890000799CC /* PhoneIcon.png in Resources */,
+				F41FAA951AFD5890000799CC /* PadIcon.png in Resources */,
+				F41FAA961AFD5890000799CC /* PhoneIcon@2x.png in Resources */,
+				F41FAA941AFD5890000799CC /* PadIcon@2x.png in Resources */,
+				F41FAABB1AFD590A000799CC /* InfoPlist.strings in Resources */,
+				F41FAA981AFD5890000799CC /* ReadMe.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +325,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F41FAA721AFD5440000799CC /* ViewController.m in Sources */,
-				F41FAA6F1AFD5440000799CC /* AppDelegate.m in Sources */,
-				F41FAA6C1AFD5440000799CC /* main.m in Sources */,
+				F41FAAA11AFD58BD000799CC /* VideoSnakeOpenGLView.m in Sources */,
+				F41FAAB11AFD58FE000799CC /* matrix.c in Sources */,
+				F41FAAA21AFD58BD000799CC /* VideoSnakeSessionManager.m in Sources */,
+				F41FAAA41AFD58BD000799CC /* VideoSnakeViewController.m in Sources */,
+				F41FAAA91AFD58CA000799CC /* MotionSynchronizer.m in Sources */,
+				F41FAAB21AFD58FE000799CC /* ShaderUtilities.c in Sources */,
+				F41FAAA31AFD58BD000799CC /* VideoSnakeAppDelegate.m in Sources */,
+				F41FAAB31AFD58FE000799CC /* main.m in Sources */,
+				F41FAAAA1AFD58CA000799CC /* MovieRecorder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,25 +355,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		F41FAA731AFD5440000799CC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F41FAA741AFD5440000799CC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F41FAA781AFD5440000799CC /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F41FAA791AFD5440000799CC /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		F41FAA871AFD5440000799CC /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -270,7 +363,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -313,7 +406,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -347,7 +440,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = VideoSnakeT01/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/VideoSnakeT01/VideoSnake-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -357,7 +450,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = VideoSnakeT01/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/VideoSnakeT01/VideoSnake-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -416,6 +509,7 @@
 				F41FAA8B1AFD5440000799CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F41FAA8C1AFD5440000799CC /* Build configuration list for PBXNativeTarget "VideoSnakeT01Tests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +518,7 @@
 				F41FAA8E1AFD5440000799CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

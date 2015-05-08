@@ -1,7 +1,7 @@
 
 /*
-     File: main.m
- Abstract: Standard main file.
+     File: matrix.h
+ Abstract: Simple 4x4 matrix computations
   Version: 1.0
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
@@ -91,15 +91,21 @@
  
  */
 
-#import <UIKit/UIKit.h>
+#ifndef MATRIX_H
+#define MATRIX_H
 
-#import "VideoSnakeAppDelegate.h"
+void mat4f_LoadIdentity(float* m);
+void mat4f_LoadScale(float* s, float* m);
 
-int main(int argc, char *argv[])
-{
-	int retVal = 0;
-	@autoreleasepool {
-	    retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([VideoSnakeAppDelegate class]));
-	}
-	return retVal;
-}
+void mat4f_LoadXRotation(float radians, float* mout);
+void mat4f_LoadYRotation(float radians, float* mout);
+void mat4f_LoadZRotation(float radians, float* mout);
+
+void mat4f_LoadTranslation(float* t, float* mout);
+
+void mat4f_LoadPerspective(float fov_radians, float aspect, float zNear, float zFar, float* mout);
+void mat4f_LoadOrtho(float left, float right, float bottom, float top, float near, float far, float* mout);
+
+void mat4f_MultiplyMat4f(const float* a, const float* b, float* mout);
+
+#endif /* MATRIX_H */

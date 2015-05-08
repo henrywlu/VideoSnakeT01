@@ -1,7 +1,6 @@
-
 /*
-     File: main.m
- Abstract: Standard main file.
+     File: VideoSnakeViewController.h
+ Abstract: View controller for camera interface
   Version: 1.0
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
@@ -92,14 +91,31 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "VideoSnakeSessionManager.h"
+#import "VideoSnakeOpenGLView.h"
 
-#import "VideoSnakeAppDelegate.h"
 
-int main(int argc, char *argv[])
-{
-	int retVal = 0;
-	@autoreleasepool {
-	    retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([VideoSnakeAppDelegate class]));
-	}
-	return retVal;
+@interface VideoSnakeViewController : UIViewController <VideoSnakeSessionManagerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate> {
+	BOOL _shouldShowStats;
+    UIButton *_recordButton;  
+	UILabel *_frameRateLabel;
+	UILabel *_dimensionsLabel;
+	UILabel *_typeLabel;
+    
+    CALayer *_layerTouch;
+
+    VideoSnakeOpenGLView *_oglView;
+	VideoSnakeSessionManager *_videoSnakeSessionManager;    
+	id _orientationObserver;
+	
+	BOOL shouldShowConfigControls;
+	
+	BOOL _recording;
+	UIBackgroundTaskIdentifier _backgroundRecordingID;
 }
+
+@property (nonatomic, retain) UIButton *recordButton;
+@property (nonatomic, retain) VideoSnakeOpenGLView *glView;
+@property (nonatomic, retain) VideoSnakeSessionManager *videoSnakeSessionManager;
+
+@end

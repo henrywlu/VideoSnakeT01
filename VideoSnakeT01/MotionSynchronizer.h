@@ -1,7 +1,6 @@
-
 /*
-     File: main.m
- Abstract: Standard main file.
+     File: MotionSynchronizer.h
+ Abstract: Sychronizes motion samples with video samples
   Version: 1.0
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
@@ -91,15 +90,28 @@
  
  */
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <CoreMedia/CMSampleBuffer.h>
+#import <CoreMedia/CMSync.h>
 
-#import "VideoSnakeAppDelegate.h"
+@protocol MotionSynchronizationDelegate;
 
-int main(int argc, char *argv[])
-{
-	int retVal = 0;
-	@autoreleasepool {
-	    retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([VideoSnakeAppDelegate class]));
-	}
-	return retVal;
-}
+@interface MotionSynchronizer : NSObject
+
+@property(nonatomic) int motionRate;
+@property(nonatomic, retain) __attribute__((NSObject)) CMClockRef sampleBufferClock;
+@property(nonatomic, readonly) id<MotionSynchronizationDelegate> sampleBufferDelegate;
+
+- (void)start;
+- (void)stop;
+- (void)appendSampleBufferForSynchronization:(CMSampleBufferRef)sampleBuffer;
+- (void)setSynchronizedSampleBufferDelegate:(id<MotionSynchronizationDelegate>)sampleBufferDelegate queue:(dispatch_queue_t)sampleBufferCallbackQueue;
+
+@end
+
+@protocol MotionSynchronizationDelegate <NSObject>
+
+@optional
+- (void)motionManager:(MotionSynchronizer *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer;
+
+@end

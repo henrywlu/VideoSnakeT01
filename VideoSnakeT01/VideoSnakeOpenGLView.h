@@ -1,7 +1,6 @@
-
 /*
-     File: main.m
- Abstract: Standard main file.
+     File: VideoSnakeOpenGLView.h
+ Abstract: The OpenGL ES view, responsible for rendering the video effect.
   Version: 1.0
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
@@ -92,14 +91,73 @@
  */
 
 #import <UIKit/UIKit.h>
+#import <OpenGLES/EAGL.h>
+#import <OpenGLES/EAGLDrawable.h>
+#import <OpenGLES/ES2/glext.h>
+#import <CoreVideo/CVOpenGLESTextureCache.h>
+#import <CoreMedia/CoreMedia.h>
+#import "VideoSnakeSessionManager.h"
 
-#import "VideoSnakeAppDelegate.h"
 
-int main(int argc, char *argv[])
+enum {
+    VideoSnakeRenderingEffect_Snake,
+    VideoSnakeRenderingEffect_Paint
+};
+typedef NSInteger VideoSnakeRenderingEffect;
+
+enum {
+    VideoSnakeRenderingColor_White,
+    VideoSnakeRenderingColor_Black
+};
+typedef NSInteger VideoSnakeRenderingColor;
+
+@class EAGLContext;
+
+@interface VideoSnakeOpenGLView : UIView 
 {
-	int retVal = 0;
-	@autoreleasepool {
-	    retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([VideoSnakeAppDelegate class]));
-	}
-	return retVal;
+	EAGLContext* _oglContext;    
+
+    CMVideoDimensions _offscreenDimensions;
+    float _focalLenIn35mmFilm;
+    VideoSnakeRenderingColor _renderingBackgroundColor;
+    VideoSnakeRenderingEffect _renderingEffect;
+    VideoSnakeRenderingEffect _internalRenderingEffect;
+    
+	GLuint _frameBufferHandle;
+	GLuint _colorBufferHandle;
+	int _width;
+	int _height;
+    GLuint _program;    
+    GLint _frame;
+    GLint _backgroundColor;
+    GLuint _modelView;
+    GLuint _projection;
+	GLuint _offscreenBufferHandle;
+    GLuint _passthruProgram;  
+    GLint _passthruFrame;  
+    
+    CVOpenGLESTextureCacheRef _videoTextureCache;    
+    CVOpenGLESTextureCacheRef _videoWritingTextureCache;
+    CVImageBufferRef _backFramePixelBuffer;
+
+	// Snake effect
+    double _velocityX;
+    double _velocityY;
+    NSTimeInterval _lastMotionTime;
+
+	// Paint effect
+    CMAttitude *_referenceAttitude;
+    CMAttitude *_lastAttitude;
 }
+
+- (OSStatus)displayAndRenderPixelBuffer:(CVImageBufferRef)srcPixelBuffer toPixelBuffer:(CVImageBufferRef)dstPixelBuffer motion:(CMDeviceMotion *)motion;
+- (void)finishRenderingPixelBuffer;
+
+- (void)setDimensions:(CMVideoDimensions)dimensions focalLenIn35mmFilm:(float)focalLenIn35mmFilm;
+
+@property(nonatomic, readwrite) VideoSnakeRenderingColor renderingBackgroundColor;
+@property(nonatomic, readwrite) VideoSnakeRenderingEffect renderingEffect;
+
+@end
+
+

@@ -1,7 +1,6 @@
-
 /*
-     File: main.m
- Abstract: Standard main file.
+     File: VideoSnakeSessionManager.h
+ Abstract: The class that creates and manages the AVCaptureSession
   Version: 1.0
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
@@ -91,15 +90,44 @@
  
  */
 
-#import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <CoreMotion/CoreMotion.h>
 
-#import "VideoSnakeAppDelegate.h"
+@protocol VideoSnakeSessionManagerDelegate;
 
-int main(int argc, char *argv[])
-{
-	int retVal = 0;
-	@autoreleasepool {
-	    retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([VideoSnakeAppDelegate class]));
-	}
-	return retVal;
-}
+@interface VideoSnakeSessionManager : NSObject 
+
+@property (readonly) Float64 videoFrameRate;
+@property (readonly) CMVideoDimensions videoDimensions;
+@property (readonly) CMVideoCodecType videoType;
+
+@property (readwrite) AVCaptureVideoOrientation referenceOrientation; // orientation for the recorded movie
+
+- (CGAffineTransform)transformFromCurrentVideoOrientationToOrientation:(AVCaptureVideoOrientation)orientation;
+
+- (void)setupAndStartCaptureSession;
+- (void)stopAndTearDownCaptureSession;
+
+- (void)setDelegate:(id<VideoSnakeSessionManagerDelegate>)delegate callbackQueue:(dispatch_queue_t)delegateCallbackQueue; // delegate is weak referenced
+
+- (void)startRecording;
+- (void)stopRecording;
+
+- (void)pauseCaptureSession;
+- (void)resumeCaptureSession;
+
+@end
+
+@protocol VideoSnakeSessionManagerDelegate <NSObject>
+@required
+- (void)setDimensions:(CMVideoDimensions)dimensions focalLenIn35mmFilm:(float)focalLenIn35mmFilm;
+
+- (OSStatus)displayAndRenderPixelBuffer:(CVImageBufferRef)srcPixelBuffer toPixelBuffer:(CVImageBufferRef)dstPixelBuffer motion:(CMDeviceMotion *)motion;
+- (void)finishRenderingPixelBuffer;
+
+- (void)recordingDidStart;
+- (void)recordingDidFailWithError:(NSError*)error; // Can happen at any point after a startRecording call, for example: startRecording->didFail (without a didStart), willStop->didFail (without a didStop)
+- (void)recordingWillStop;
+- (void)recordingDidStop;
+@end
+

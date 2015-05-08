@@ -1,7 +1,6 @@
-
 /*
-     File: main.m
- Abstract: Standard main file.
+     File: ShaderUtilities.h
+ Abstract: Shader compiler and linker utilities
   Version: 1.0
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
@@ -91,15 +90,22 @@
  
  */
 
-#import <UIKit/UIKit.h>
+#ifndef VideoSnake_ShaderUtilities_h
+#define VideoSnake_ShaderUtilities_h
+    
+#include <OpenGLES/ES2/gl.h>
+#include <OpenGLES/ES2/glext.h>
 
-#import "VideoSnakeAppDelegate.h"
+GLint glueCompileShader(GLenum target, GLsizei count, const GLchar **sources, GLuint *shader);
+GLint glueLinkProgram(GLuint program);
+GLint glueValidateProgram(GLuint program);
+GLint glueGetUniformLocation(GLuint program, const GLchar *name);
 
-int main(int argc, char *argv[])
-{
-	int retVal = 0;
-	@autoreleasepool {
-	    retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([VideoSnakeAppDelegate class]));
-	}
-	return retVal;
-}
+GLint glueCreateProgram(const GLchar *vertSource, const GLchar *fragSource,
+                        GLsizei attribNameCt, const GLchar **attribNames, 
+                        const GLint *attribLocations,
+                        GLsizei uniformNameCt, const GLchar **uniformNames,
+                        GLint *uniformLocations,
+                        GLuint *program);
+
+#endif
